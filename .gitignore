@@ -1,2 +1,14 @@
 .DS_Store
 *.log
+~$*
+
+# Private interview prep — not for publication
+interview-talking-points.md
+
+# Résumé working files live outside the publish directory (docs/) entirely.
+# Only the redacted PDF in docs/assets/ is ever published.
+drafts/
+
+# Seatbelt: no working docs inside the publish directory, ever.
+docs/**/*.docx
+docs/assets/max-harkins-resume_*.pdf

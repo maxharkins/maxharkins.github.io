@@ -126,11 +126,11 @@ h1.name {
 .about p .soft { color: var(--muted); }
 
 /* ---- Documents: square-ish tiles in a row ---- */
-.docs { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(10px, 2vw, 14px); }
-a.doc {
+.docs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(10px, 2vw, 14px); }
+.doc {
   aspect-ratio: 5 / 4;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: 12px; text-align: center; text-decoration: none;
+  gap: 10px; text-align: center; text-decoration: none;
   background: var(--surface); border: 1px solid var(--line);
   border-radius: 15px; padding: 14px; position: relative;
   transition: border-color .16s, transform .16s, box-shadow .16s;
@@ -139,23 +139,33 @@ a.doc:hover {
   border-color: var(--accent); transform: translateY(-3px);
   box-shadow: 0 12px 26px -14px rgba(20, 27, 37, 0.4);
 }
-a.doc .ico {
+.doc .ico {
   width: 46px; height: 46px; border-radius: 12px;
   background: var(--accent-soft); color: var(--accent);
   display: grid; place-items: center; font-size: 21px;
 }
-a.doc .t { font-family: var(--font-head); font-weight: 600; font-size: clamp(14px, 2.4vw, 16px); color: var(--ink); line-height: 1.15; }
-a.doc.soon { opacity: 0.72; }
-a.doc .soon-tag {
-  position: absolute; top: 9px; right: 9px;
-  font-size: 9px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--faint); border: 1px solid var(--line-strong);
-  padding: 2px 6px; border-radius: 20px;
+.doc .t { font-family: var(--font-head); font-weight: 600; font-size: clamp(14px, 2.4vw, 16px); color: var(--ink); line-height: 1.15; }
+.doc .sub { margin-top: -4px; font-size: 11.5px; color: var(--faint); line-height: 1.25; }
+.doc.soon { opacity: 0.72; }
+span.doc { cursor: default; }
+
+/* Narrow screens: the tiles stack into wide rows so the sub-line has room */
+@media (max-width: 560px) {
+  .docs { grid-template-columns: 1fr; }
+  .doc {
+    aspect-ratio: auto; text-align: left;
+    display: grid; grid-template-columns: auto 1fr;
+    align-items: center; column-gap: 14px; row-gap: 2px;
+    padding: 13px 16px;
+  }
+  .doc .ico { grid-row: 1 / span 2; width: 40px; height: 40px; font-size: 18px; }
+  .doc .t { align-self: end; }
+  .doc .sub { align-self: start; margin-top: 0; }
 }
 
 /* ---- Pinned projects: rows ---- */
 .link-list { display: flex; flex-direction: column; gap: 10px; }
-a.link {
+.link {
   display: flex; align-items: center; gap: 15px; text-decoration: none;
   padding: 15px 17px; background: var(--surface);
   border: 1px solid var(--line); border-radius: 13px;
@@ -165,16 +175,23 @@ a.link:hover {
   border-color: var(--accent); transform: translateX(3px);
   box-shadow: 0 8px 22px -14px rgba(20, 27, 37, 0.4);
 }
-a.link .ico {
+.link .ico {
   flex: none; width: 36px; height: 36px; border-radius: 10px;
   background: var(--accent-soft); color: var(--accent);
   display: grid; place-items: center; font-size: 16px;
 }
-a.link .body { flex: 1 1 auto; min-width: 0; }
-a.link .t { display: block; font-family: var(--font-head); font-weight: 600; font-size: 15.5px; color: var(--ink); }
-a.link .d { display: block; font-size: 13.5px; color: var(--muted); margin-top: 2px; }
+.link .body { flex: 1 1 auto; min-width: 0; }
+.link .t { display: block; font-family: var(--font-head); font-weight: 600; font-size: 15.5px; color: var(--ink); }
+.link .d { display: block; font-size: 13.5px; color: var(--muted); margin-top: 2px; }
 a.link .arw { flex: none; color: var(--faint); font-size: 16px; transition: color .16s, transform .16s; }
 a.link:hover .arw { color: var(--accent); transform: translateX(2px); }
+.link.is-static { cursor: default; opacity: 0.72; }
+.link .tag {
+  display: inline-block; vertical-align: 1px; margin-left: 7px;
+  font-family: var(--font-body); font-size: 9.5px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint);
+  border: 1px solid var(--line-strong); padding: 2px 6px; border-radius: 20px;
+}
 
 /* ---- Footer ---- */
 footer.foot {

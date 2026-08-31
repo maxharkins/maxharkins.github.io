@@ -54,11 +54,12 @@
     </section>
 
     <!-- DOCUMENTS -->
-    <!-- Résumé & CV open PDF files. Everything in docs/ is published, so only the
-         redacted PDF export belongs here — drafts live in the sibling drafts/ folder.
-         Use these exact names (or change the href below to match your filenames):
+    <!-- Résumé opens a PDF. Everything in docs/ is published, so only the redacted PDF
+         export belongs here — drafts live in the sibling drafts/ folder.
            docs/assets/max-harkins-resume.pdf
-           docs/assets/max-harkins-cv.pdf
+         CV is not published yet: when the PDF exists at docs/assets/max-harkins-cv.pdf,
+         swap the <span class="doc soon"> below back to an <a class="doc" href="...">
+         and change the .sub line to an "Updated:" date.
          Portfolio is a page in this site (portfolio.html). -->
     <section class="sec">
       <p class="kicker">Documents</p>
@@ -66,38 +67,38 @@
         <a class="doc" href="assets/max-harkins-resume.pdf" target="_blank" rel="noopener">
           <span class="ico">▤</span>
           <span class="t">Résumé</span>
+          <span class="sub">Updated: Aug. 31, 2026</span>
         </a>
-        <a class="doc" href="assets/max-harkins-cv.pdf" target="_blank" rel="noopener">
+        <span class="doc soon">
           <span class="ico">▥</span>
           <span class="t">CV</span>
-        </a>
+          <span class="sub">Coming soon</span>
+        </span>
         <a class="doc soon" href="portfolio.html">
-          <span class="soon-tag">Soon</span>
           <span class="ico">✎</span>
           <span class="t">Portfolio</span>
+          <span class="sub">Coming soon</span>
         </a>
       </div>
     </section>
 
-    <!-- PINNED PROJECTS — replace the placeholders with real titles, links, and blurbs -->
+    <!-- PINNED PROJECTS -->
     <section class="sec">
       <p class="kicker">Pinned Projects</p>
       <div class="link-list">
-        <a class="link" href="#">
+        <a class="link" href="https://github.com/maxharkins/WPv3" target="_blank" rel="noopener">
           <span class="ico">◆</span>
-          <span class="body"><span class="t">[Project One]</span><span class="d">[Short description — one line on what it is.]</span></span>
+          <span class="body"><span class="t">WPv3</span><span class="d">3D multiphoton micromachining engine.</span></span>
           <span class="arw">↗</span>
         </a>
-        <a class="link" href="#">
+        <span class="link is-static">
           <span class="ico">◆</span>
-          <span class="body"><span class="t">[Project Two]</span><span class="d">[Short description — link to a repo, paper, or writeup.]</span></span>
-          <span class="arw">↗</span>
-        </a>
-        <a class="link" href="#">
+          <span class="body"><span class="t">Sedna <span class="tag">Private</span></span><span class="d">EMG wearable pairing, streaming, &amp; gesture control on iOS and Android.</span></span>
+        </span>
+        <span class="link is-static">
           <span class="ico">◆</span>
-          <span class="body"><span class="t">[Project Three]</span><span class="d">[Short description.]</span></span>
-          <span class="arw">↗</span>
-        </a>
+          <span class="body"><span class="t">Air Mouse <span class="tag">Coming soon</span></span><span class="d">An HID interface for controlling computers.</span></span>
+        </span>
       </div>
     </section>
 

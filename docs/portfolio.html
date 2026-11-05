@@ -12,31 +12,17 @@
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-  <div class="topbar">
-    <a class="backlink" href="index.html">← Max Harkins</a>
+  <nav class="topbar" aria-label="Portfolio controls">
+    <a class="backlink" href="index.html" aria-label="Back to home">←</a>
+    <a class="btn ghost" href="assets/max-harkins-portfolio.pdf" target="_blank" rel="noopener">View as PDF</a>
     <button class="toggle" id="themeBtn" aria-label="Toggle color theme" title="Toggle light / dark">◐</button>
-  </div>
+  </nav>
 
-  <div class="page">
-    <main class="doc-head rise r1">
-      <h1>Portfolio</h1>
-      <p class="sub">Selected projects in laser instrumentation, resin microfabrication, and EMG hand tracking.</p>
-      <div class="doc-actions">
-        <a class="btn primary" href="assets/max-harkins-portfolio.pdf" target="_blank" rel="noopener">View portfolio PDF</a>
-        <a class="btn ghost" href="assets/max-harkins-portfolio.pdf" download>Download PDF</a>
-      </div>
-      <div class="portfolio-pages" aria-label="Portfolio pages">
-        <img src="assets/portfolio-page-1.webp" width="1469" height="1900" alt="Page 1. WayPoint laser ablation system, scan path generation, and fabricated collagen structures.">
-        <img src="assets/portfolio-page-2.webp" width="1469" height="1900" loading="lazy" alt="Page 2. Resin Microfabrication, with the violin STL model and a microscope image of the print.">
-        <img src="assets/portfolio-page-3.webp" width="1469" height="1900" loading="lazy" alt="Page 3. Meta Neural Band EMG, Sedna, and the hand kinematics model.">
-      </div>
-    </main>
-
-    <footer class="foot">
-      <span>© <span id="yr"></span> Max Harkins</span>
-      <span><a href="index.html">Back to home</a></span>
-    </footer>
-  </div>
+  <main class="page portfolio-pages" aria-label="Portfolio">
+    <img src="assets/portfolio-page-1.webp" width="1469" height="1900" alt="Page 1. WayPoint laser ablation system, scan path generation, and fabricated collagen structures.">
+    <img src="assets/portfolio-page-2.webp" width="1469" height="1900" loading="lazy" alt="Page 2. Resin Microfabrication, with the violin STL model and a microscope image of the print.">
+    <img src="assets/portfolio-page-3.webp" width="1469" height="1900" loading="lazy" alt="Page 3. Meta Neural Band EMG, Sedna, and the hand kinematics model.">
+  </main>
 
   <script src="assets/theme.js"></script>
 </body>

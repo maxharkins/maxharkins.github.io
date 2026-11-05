@@ -240,6 +240,17 @@ footer.foot a:hover { color: var(--accent); }
 .btn.ghost { border: 1px solid var(--line-strong); color: var(--ink); background: var(--surface); }
 .btn.ghost:hover { border-color: var(--accent); color: var(--accent); }
 
+.portfolio-pages {
+  display: grid;
+  gap: 20px;
+  margin-top: 24px;
+}
+.portfolio-pages img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .doc-body { padding-top: clamp(24px, 4vw, 36px); }
 .entry {
   padding: 22px 0; border-top: 1px solid var(--line);

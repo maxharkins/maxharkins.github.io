@@ -7,11 +7,12 @@ Personal site for Max Harkins — University of Rochester, Biomedical Engineerin
 ```
 docs/                     ← GitHub Pages serves the site from this folder
 ├── index.html            ← the landing page (name, about, documents, projects)
-├── portfolio.html        ← portfolio page (currently "coming soon")
+├── portfolio.html        ← portfolio page with PDF links
 └── assets/
     ├── styles.css        ← all styling (colors, fonts, layout) — edit here
     ├── theme.js          ← light/dark toggle behavior
-    ├── max-harkins-resume.pdf     ← the redacted résumé the site links to
+    ├── max-harkins-resume.pdf     ← the résumé the site links to
+    ├── max-harkins-portfolio.pdf  ← the portfolio the site links to
     ├── me-with-a-stegosaurus.jpg  ← the photo used on the site (web-optimized)
     └── me-with-a-stegosaurus.png  ← original full-res photo (not used by the site)
 
@@ -39,7 +40,7 @@ GitHub's web editor by clicking the pencil ✏️ on any file), commit, and the 
 
   (or change the `href`s in the `<!-- DOCUMENTS -->` section to match your filenames.)
   Copy only the finished, redacted PDF across — never the `.docx` or a dated export.
-- **Portfolio** — edit `docs/portfolio.html` when you're ready to build it out.
+- **Portfolio** — replace `docs/assets/max-harkins-portfolio.pdf` with the latest portfolio export.
 - **Colors & fonts** — `docs/assets/styles.css`, at the top under `:root`.
 
 ## Publishing to GitHub Pages
